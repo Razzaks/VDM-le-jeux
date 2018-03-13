@@ -284,6 +284,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Countdown.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\Jauge.cs" />
     <Compile Include="Assets\Script\MenuScript.cs" />
     <Compile Include="Assets\Script\portablescript.cs" />
     <Compile Include="Assets\Script\prof.cs" />
