@@ -14,7 +14,8 @@ public class Countdown : MonoBehaviour
     {
         StartCoroutine(timer());
         time += 1;
-	}
+        GameManager = GameObject.Find("Canvas").GetComponent<GameManager>();
+    }
 	
 	// Update is called once per frame
 	void Update ()

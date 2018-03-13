@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] miniJeux;
+    public int[] miniJeux;
     private bool[] passage;
     private int i = 0;
     private int ii = 0;
@@ -51,7 +52,8 @@ public class GameManager : MonoBehaviour
     {
         if (IsOnlyTrue() == false)
         {
-            miniJeux[ii].SetActive(false);
+            //miniJeux[ii].SetActive(false);
+            SceneManager.UnloadSceneAsync(ii);
             do
             {
                 i = Random.Range(0, 4);
@@ -67,7 +69,8 @@ public class GameManager : MonoBehaviour
 
     void ChangeGame()
     {
-        miniJeux[i].SetActive(true);
+        //miniJeux[i].SetActive(true);
+        SceneManager.LoadScene(i, LoadSceneMode.Additive);
         passage[i] = true;
         ii = i;
         Debug.Log(i+=1);
