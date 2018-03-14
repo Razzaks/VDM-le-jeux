@@ -284,11 +284,20 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Countdown.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Script\Jauge.cs" />
     <Compile Include="Assets\Script\MenuScript.cs" />
     <Compile Include="Assets\Script\portablescript.cs" />
     <Compile Include="Assets\Script\prof.cs" />
     <Compile Include="Assets\Script\RepareOrdi.cs" />
+=======
+    <Compile Include="Assets\Script\MenuScript.cs" />
+    <Compile Include="Assets\Script\portablescript.cs" />
+    <Compile Include="Assets\Script\prof.cs" />
+    <Compile Include="Assets\Script\QTE.cs" />
+    <Compile Include="Assets\Script\QTEtest.cs" />
+    <Compile Include="Assets\Script\Runner.cs" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

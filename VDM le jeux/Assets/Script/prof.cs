@@ -1,18 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class prof : MonoBehaviour {
-    public object tete;
+public class prof : MonoBehaviour
+{
     private Animator animator;
 
-	// Use this for initialization
-	void Start () {
+    public float maxTime = 9f;
+    public float minTime = 2f;
+
+    private float time;
+    private float waitTime;
+
+    // Use this for initialization
+    void Start()
+    {
+        waitTime = 0;
         animator = GetComponent<Animator>();
+        SetRandomTime();
     }
-	
-	// Update is called once per frame
-	void Update () {
-        animator.SetTrigger("next");
+  void SetRandomTime()
+    {
+       
+        waitTime = Random.Range(minTime, maxTime);
+     //   Debug.Log(waitTime);
+    }
+
+    void FixedUpdate()
+    {
+
+        time += Time.deltaTime;
+
+        if (time >= waitTime)
+        {
+            // animation.Play(reverse);
+            animator.SetTrigger("next");
+            SetRandomTime();
+            waitTime += time;
+        }
     }
 }
