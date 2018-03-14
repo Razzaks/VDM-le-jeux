@@ -55,9 +55,4 @@ public class portablescript : MonoBehaviour {
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("vue");
-    }
-
 }
