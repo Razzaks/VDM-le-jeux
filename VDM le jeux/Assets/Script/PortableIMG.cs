@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class portablescript : MonoBehaviour {
+public class PortableIMG : MonoBehaviour {
 
-    public GameObject portable;
+    public ImagePosition img;
     public bool Waiting = false;
 
 
@@ -12,35 +12,36 @@ public class portablescript : MonoBehaviour {
     void Start()
     {
         //postion basse
-        transform.position = new Vector3(165, -20, -60);
+        transform.position = new Vector3(155, -10, -96);
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
 
 
-       if (Input.GetButtonDown("R"))
+        if (Input.GetButtonDown("R"))
         {
             //position haute
-            transform.position = new Vector3(165, 20, -60);
+            transform.position = new Vector3(155, 0, -100);
             StartCoroutine(wait());
         }
         if (Input.GetButtonDown("E"))
-        { 
-            transform.position = new Vector3(165, 20, -60);
+        {
+            transform.position = new Vector3(155, 0, -100);
             StartCoroutine(wait());
         }
 
         if (Input.GetButtonDown("T"))
         {
-            transform.position = new Vector3(165, 20, -60);
+            transform.position = new Vector3(155, 0, -100);
             StartCoroutine(wait());
         }
         else
         {
-            if(Waiting == false)
+            if (Waiting == false)
             {
-                transform.position = new Vector3(165, -20, -60);
+                transform.position = new Vector3(155, -10, -96);
 
             }
         }
@@ -50,7 +51,7 @@ public class portablescript : MonoBehaviour {
     IEnumerator wait()
     {
         Waiting = true;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         Waiting = false;
 
     }

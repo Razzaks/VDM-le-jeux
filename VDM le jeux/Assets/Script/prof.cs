@@ -7,20 +7,22 @@ public class prof : MonoBehaviour
 {
     private Animator animator;
 
+
     public float maxTime = 9f;
     public float minTime = 2f;
 
     private float time;
     private float waitTime;
 
-    // Use this for initialization
+
+
     void Start()
     {
         waitTime = 0;
         animator = GetComponent<Animator>();
         SetRandomTime();
     }
-  void SetRandomTime()
+    void SetRandomTime()
     {
        
         waitTime = Random.Range(minTime, maxTime);

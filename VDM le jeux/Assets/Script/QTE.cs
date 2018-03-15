@@ -121,19 +121,18 @@ public class QTE : MonoBehaviour
     {
         if (CountingDone == 1)
         {
-          //  QTEGen = 4;
-          //  CountingDone = 2;
-           // PassBox.GetComponent<Text>().text = "Fail";
+            QTEGen = 4;
+           CountingDone = 2;
+            PassBox.GetComponent<Text>().text = "Fail";
             yield return new WaitForSeconds(1f);
             CorrectKey = 0;
             PassBox.GetComponent<Text>().text = "";
             DisplayBox.GetComponent<Text>().text = "";
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.3f);
             WaitingForKey = 0;
             CountingDone = 1;
 
         }
-        QTEGen = Random.Range(1, 4);
     }
 
 }

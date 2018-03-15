@@ -287,7 +287,8 @@
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Jauge.cs" />
     <Compile Include="Assets\Script\MenuScript.cs" />
-    <Compile Include="Assets\Script\portablescript.cs" />
+    <Compile Include="Assets\Script\PortableIMG.cs" />
+    <Compile Include="Assets\Script\portablescript1.cs" />
     <Compile Include="Assets\Script\prof.cs" />
     <Compile Include="Assets\Script\QTE.cs" />
     <Compile Include="Assets\Script\QTEtest.cs" />
