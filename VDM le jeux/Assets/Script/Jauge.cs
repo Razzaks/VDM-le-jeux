@@ -7,6 +7,8 @@ public class Jauge : MonoBehaviour
 {
     public Slider JaugeVise;
     public GameManager GameManager;
+    public Animator AnimatorCatapulte;
+    public Animator Dechet;
     public float i = 0;
     public bool IsUp = false;
     public bool Stop = false;
@@ -56,18 +58,21 @@ public class Jauge : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 Stop = true;
+                AnimatorCatapulte.SetBool("Lanch", true);
+
             }
         }
 
         if (i >= 0.4 && i <= 0.6 && Stop == true)
         {
-
+            Dechet.SetTrigger("WinLanch");
             print("win !");
             EndGame();
         }
         else if (Stop == true)
         {
             print("lose !");
+            Dechet.SetTrigger("LoseLanch");
             EndGame();
         }
     }

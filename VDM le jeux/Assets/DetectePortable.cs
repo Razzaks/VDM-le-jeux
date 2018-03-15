@@ -6,13 +6,16 @@ public class DetectePortable : MonoBehaviour {
 
     public GameObject smiley;
     public GameObject scolere;
+    public GameManager GameManager;
 
     private bool encolere;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         encolere = false;
         scolere.SetActive(false);
+        GameManager = GameObject.Find("Canvas").GetComponent<GameManager>();
 
     }
 	
@@ -35,6 +38,7 @@ public class DetectePortable : MonoBehaviour {
         if (other.CompareTag("Portable"))
         {
             encolere = true;
+            GameManager.NextGame();
             print("lol");
         }
     }

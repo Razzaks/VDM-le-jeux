@@ -7,6 +7,7 @@ public class QTE : MonoBehaviour
 {
     public GameObject DisplayBox;
     public GameObject PassBox;
+    public GameManager GameManager;
 
     public int QTEGen;
     public int WaitingForKey;
@@ -18,13 +19,16 @@ public class QTE : MonoBehaviour
     {
         win= 0;
         QTEGen = Random.Range(1, 4);
+        GameManager = GameObject.Find("Canvas").GetComponent<GameManager>();
     }
 
     void Update()
     {
         if (win >= 5)
         {
+
             Debug.Log("win");
+            GameManager.NextGame();
         }
 
         if (WaitingForKey == 0)

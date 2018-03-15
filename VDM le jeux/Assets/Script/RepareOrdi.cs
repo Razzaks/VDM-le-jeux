@@ -9,6 +9,7 @@ public class RepareOrdi : MonoBehaviour {
     private int ii = 0;
     public GameObject[] direction;
     public GameManager GameManager;
+    public Animator[] Punch;
     public bool wait = false;
 
 	// Use this for initialization
@@ -21,6 +22,7 @@ public class RepareOrdi : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        Punching();
         Fixing();
 	}
 
@@ -122,6 +124,26 @@ public class RepareOrdi : MonoBehaviour {
         yield return new WaitForSeconds(Random.Range(1,2));
         wait = true;
         print("okay !");
+    }
+
+    //lance les animation
+    void Punching()
+    {
+        if (Input.GetKeyDown("right"))
+        {
+            Punch[0].SetTrigger("Punch");
+        }
+
+        if (Input.GetKeyDown("left"))
+        {
+            Punch[1].SetTrigger("Punch");
+        }
+
+        if (Input.GetKeyDown("down"))
+        {
+            Punch[2].SetTrigger("Punch");
+        }
+
     }
 
     void EndGame()
